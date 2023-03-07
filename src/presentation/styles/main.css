@@ -1,0 +1,222 @@
+:root {
+  --width-wrapper: 45rem;
+  --typeface: 'Playfair Display', serif;
+  --input-border: 2px;
+  --input-radius: 4px;
+  /* Spacing custom properties following 8pt grid */
+  --spacing-sm: 0.5rem;
+  --spacing-base: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 2.5rem;
+  --spacing-3xl: 3rem;
+}
+
+:root {
+  --line-height-headings: 1.2;
+  --line-height-body: 1.5;
+  /* Typography typescale custom properties definition */
+  --font-size-sm: clamp(0.8rem, 0.46vw + 0.66rem, 1rem);
+  --font-size-base: clamp(1rem, 0.57vw + 0.82rem, 1.25rem);
+  --font-size-md: clamp(1.25rem, 0.71vw + 1.03rem, 1.56rem);
+  --font-size-lg: clamp(1.56rem, 0.89vw + 1.28rem, 1.95rem);
+  --font-size-xl: clamp(1.95rem, 1.12vw + 1.6rem, 2.44rem);
+  --font-size-xxl: clamp(2.44rem, 1.4vw + 2.01rem, 3.05rem);
+  --font-size-xxxl: clamp(3.05rem, 1.74vw + 2.51rem, 3.81rem);
+  /* Typography font-weight custom properties definition */
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+}
+
+:root {
+  --hue: 200;
+  --sat: 66%;
+  --lum: 77%;
+  /* Primary */
+  --primary-100: hsl(var(--hue), var(--sat), calc(var(--lum) + 17%));
+  --primary-500: hsl(var(--hue), var(--sat), var(--lum));
+  /* Complementary color: hue + 180 */
+  --complementary-500: hsl(calc(var(--hue) + 180), var(--sat), calc(var(--lum) - 37%));
+  /* Grayscale */
+  --gray-100: hsl(var(--hue), calc(var(--sat) - 50%), calc(var(--lum) + 3%));
+  --gray-200: hsl(var(--hue), calc(var(--sat) - 50%), calc(var(--lum) - 13%));
+  --gray-300: hsl(var(--hue), calc(var(--sat) - 50%), calc(var(--lum) - 37%));
+  --gray-400: hsl(var(--hue), calc(var(--sat) - 50%), calc(var(--lum) - 61%));
+  --gray-500: hsl(var(--hue), calc(var(--sat) - 50%), calc(var(--lum) - 65%));
+  /* Neutral */
+  --white: #ffffff;
+  --black: #000000;
+  /* Design tokens */
+  --bg: var(--primary-100);
+  --body: var(--gray-400);
+  --title: var(--gray-500);
+  --border: var(--gray-200);
+  --link: var(--complementary-500);
+}
+
+:is(h1, h2, h3, h4) {
+  line-height: var(--line-height-headings);
+  color: var(--title);
+}
+
+:is(h2, h3, h4):not(:first-child) {
+  margin-top: var(--spacing-lg);
+}
+
+h1 {
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-900);
+}
+
+h2 {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-600);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-500);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-500);
+}
+
+h5 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-500);
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  font-weight: var(--font-weight-400);
+  color: var(--body);
+}
+
+b,
+strong {
+  color: var(--complementary-500);
+  font-weight: var(--font-weight-600);
+}
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+* - The "symbol *" part is to solve Firefox SVG sprite bug
+*/
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: min(var(--width-wrapper), 100% - clamp(2rem, 2.29vw + 1.29rem, 3rem));
+  margin-inline: auto;
+  background-color: var(--bg);
+  font-family: var(--typeface);
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+header {
+  margin-top: max(5vh, var(--spacing-lg));
+}
+
+main {
+  margin-top: var(--spacing-2xl);
+}
+
+article > * + * {
+  margin-top: var(--spacing-base);
+}
+
+footer {
+  margin-block: var(--spacing-2xl);
+}
+
+footer p {
+  border-top: 1px solid var(--border);
+  padding-top: var(--spacing-sm);
+}
+
+.input {
+  font-size: var(--font-size-base);
+  font-size: max(var(--font-size-base), 1em);
+  font-family: inherit;
+  padding: 0.25em var(--spacing-sm);
+  background-color: var(--white);
+  border: var(--input-border) solid var(--gray-100);
+  border-radius: var(--input-radius);
+  transition: 180ms box-shadow ease-in-out;
+}
+.input:focus {
+  border-color: var(--primary-500);
+  outline: 4px solid transparent;
+  box-shadow: 0 0 0 4px hsla(var(--hue), var(--sat), calc(var(--lum) - 8%), 0.6);
+}
+.input:not(textarea) {
+  line-height: 1;
+  height: 2.25rem;
+}
+.input[readonly] {
+  cursor: not-allowed;
+  color: var(--gray-200);
+}
+.input[disabled] {
+  color: var(--gray-300);
+  background-color: var(--gray-100);
+}
+
+input[type='file'] {
+  font-size: 0.9em;
+  padding-top: 0.3rem;
+}
+
+textarea.input {
+  resize: vertical;
+}
+
+form {
+  display: grid;
+  grid-gap: var(--spacing-base);
+}
+@media (min-width: 31.25rem) {
+  form {
+    padding-inline: var(--spacing-2xl);
+  }
+}
+
+.compound-input {
+  display: grid;
+  grid-gap: var(--spacing-sm);
+}
+
+/*# sourceMappingURL=main.css.map */

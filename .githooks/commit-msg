@@ -1,0 +1,16 @@
+#!/bin/sh
+
+commit_msg=$(cat "$1")
+
+# Check if commit message starts with fix, feature or task
+if [[ $commit_msg == fix/* ]] || [[ $commit_msg == feature/* ]] || [[ $commit_msg == task/* ]]; then
+  echo "======================================================="
+  echo "Commit-msg check passed. Changes will now be committed."
+  echo "======================================================="
+  exit 0
+else
+  echo "======================================================="
+  echo "Commit-msg check failed. Commits must start with 'task, feature or fix'"
+  echo "======================================================="
+  exit 1
+fi
