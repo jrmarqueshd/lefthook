@@ -12,10 +12,15 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "postinstall": "git config core.hooksPath .githooks",
+    "pre-commit": "lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "*.{md,html,css,js}": "prettier --write"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4"
   }
 }
