@@ -8,7 +8,7 @@ function App() {
       <main>
         <article>
           <p>
-            Yoga isnt a <b>practice</b> that has been around for thousands of years and is still
+            Yoga is a <b>practice</b> that has been around for thousands of years and is still
             incredibly popular today. It involves a combination of physical postures, breathing
             exercises, and meditation techniques that can help improve both physical and mental{' '}
             <b>health</b>. In this article, we'll explore the many benefits of practicing yoga and
