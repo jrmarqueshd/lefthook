@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "lint-staged": "^13.1.2",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "tsx": "^3.12.3"
   }
 }
