@@ -2,7 +2,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>The Benefits of Yoga Practice</h1>
+        <h1>The Benefits of comer abobora</h1>
         <h2>Why Practicing Yoga Should Be Part of Your Daily Routine</h2>
       </header>
       <main>
@@ -21,19 +21,120 @@ function App() {
               <input className="input" id="text-input" type="text" value="prova" disabled />
             </div>
 
-            <div className="compound-input">
+            <div className="compound-input"
+            
+            
+            
+            
+            >
               <label htmlFor="text-area">Text area</label>
-              <textarea className="input" name="textArea" id="text-area" rows={4}></textarea>
+              <textarea className="input" name="textArea" id="text-area" rows={4}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </textarea>
             </div>
 
             <div className="compound-input">
               <label htmlFor="file-input">File Input</label>
-              <input className="input" type="file" name="fileInput" id="file-input" />
-            </div>
+              <input className="input" type="file" name="fileInput" id="file-input" 
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              />
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           </div>
           </form>
 
           <h4>Improved Flexibility and Strength</h4>
           <p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             One of the most obvious benefits of practicing yoga is improved
             <b>flexibility and strength</b>. Many of the postures require you to stretch and hold
             your body in various positions, which can help increase your range of motion and overall
