@@ -26,6 +26,9 @@ function App() {
             
             
             
+            
+            
+            
             >
               <label htmlFor="text-area">Text area</label>
               <textarea className="input" name="textArea" id="text-area" rows={4}>
