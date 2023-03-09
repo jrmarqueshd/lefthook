@@ -10,13 +10,13 @@ pre-push:
 
 pre-commit:
   parallel: true
-  commands:
-    eslint:
-      glob: "*.{ts,tsx}"
-      run: yarn eslint --fix {staged_files}
-#   scripts:
-#     "hello.js":
-#       runner: node
+  # commands:
+  #   eslint:
+  #     glob: "*.{ts,tsx}"
+  #     run: yarn eslint --fix {staged_files}
+  scripts:
+    "hello.js":
+      runner: node
 
 commit-msg:
   commands:
